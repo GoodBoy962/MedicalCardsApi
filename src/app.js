@@ -17,14 +17,14 @@ const swaggerJsDoc = SwaggerJSDoc({
     info: {
       title: pkg.name,
       version: pkg.version,
-      description: pkg.description,
+      description: pkg.description
     },
     host: config.app.hostUri,
-    basePath: '/',
+    basePath: '/'
   },
   apis: [
     'src/routes/**/*.js',
-    'src/models/**/*.js',
+    'src/models/**/*.js'
   ]
 });
 
@@ -36,7 +36,7 @@ SwaggerTools(swaggerJsDoc, function (middleware) {
   app.use(middleware.swaggerSecurity(auth));
   app.use(middleware.swaggerValidator());
   app.use(middleware.swaggerRouter({
-    controllers: 'src/routes',
+    controllers: 'src/routes'
   }));
   app.use(middleware.swaggerUi({}));
   app.use(error);

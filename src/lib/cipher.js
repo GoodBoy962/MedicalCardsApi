@@ -31,7 +31,7 @@ const decrypt = (value, key) => {
   return CryptoJS.enc.Utf8.stringify(bytes);
 };
 
-const sha3 = value =>CryptoJS.SHA3(value).toString();
+const sha3 = value => CryptoJS.SHA3(value).toString();
 
 module.exports = {
   decrypt,
@@ -40,4 +40,4 @@ module.exports = {
   decryptAssymetrically,
   encryptAssymetrically,
   getBitPublicKey
-}
+};

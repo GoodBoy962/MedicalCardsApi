@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const web3 = require('./web3');
 const utils = require('ethereumjs-util');

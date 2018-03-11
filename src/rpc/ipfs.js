@@ -1,3 +1,5 @@
+'use strict';
+
 const ipfsAPI = require('ipfs-api');
 const ipfsConf = require('../config').ipfs;
 const ipfs = ipfsAPI(ipfsConf.ipfsUrl, ipfsConf.ipfsPort);
@@ -21,4 +23,4 @@ const addFile =
       }
     );
 
-module.exports = { getFile, addFile };
+module.exports = {getFile, addFile};

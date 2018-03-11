@@ -2,7 +2,7 @@ const storage = require('../rpc/storage');
 const privateKey = require('../config').pkey;
 const getFile = require('../rpc/ipfs').getFile;
 const Err = require('../models/Error');
-const { decrypt, decryptAssymetrically, sha3 } = require('../lib/cipher');
+const {decrypt, decryptAssymetrically, sha3} = require('../lib/cipher');
 
 /**
  * @swagger
@@ -72,11 +72,11 @@ async function get({swagger}, res, next) {
         throw new Err.NoAccessError();
       }
     } else {
-        throw new Err.NotFoundError();
+      throw new Err.NotFoundError();
     }
-  } catch(e) {
+  } catch (e) {
     next(e);
   }
 }
 
-module.exports = { get }
+module.exports = {get};

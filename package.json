@@ -1,15 +1,16 @@
 {
   "name": "MedicalRecrodsApi",
   "version": "0.0.1",
-  "description": "api for MedicalRecordsStorage interconnection",
+  "description": "api to interconnect with MedicalRecordsStorage",
   "main": "src/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "keywords": [
     "express.js",
     "swagger",
-    "rest"
+    "rest",
+    "ethereum",
+    "web3",
+    "ipfs"
   ],
   "author": "Alexander Pliskin <alexnetmore@gmail.com>",
   "license": "Apache-2.0",

@@ -12,40 +12,40 @@
  *       message:
  *         type: string
  */
-class RpcError extends Error{
+class RpcError extends Error {
 
-  constructor(message = 'error', code = 500){
+  constructor(message = 'error', code = 500) {
     super(message);
-    Object.assign(this, { code, message });
+    Object.assign(this, {code, message});
   }
 
-  toJSON(){
-    const { code, message } = this;
-    return { code, message };
+  toJSON() {
+    const {code, message} = this;
+    return {code, message};
   }
 
 }
 
-class InternalError extends RpcError{
-  constructor(){
+class InternalError extends RpcError {
+  constructor() {
     super('Internal error', 500);
   }
 }
 
-class AccessDeniedError extends RpcError{
-  constructor(){
+class AccessDeniedError extends RpcError {
+  constructor() {
     super('Access denied', 403);
   }
 }
 
-class NoAccessError extends RpcError{
-  constructor(){
+class NoAccessError extends RpcError {
+  constructor() {
     super('No access', 404);
   }
 }
 
-class NotFoundError extends RpcError{
-  constructor(){
+class NotFoundError extends RpcError {
+  constructor() {
     super('Not found', 404);
   }
 }

@@ -11,8 +11,8 @@ const AccessDenied = require('../models/Error').AccessDeniedError;
  *       name: Authorization
  *       in: header
  */
-function BasicAuth(req, def, token, callback){
-  if(config.app.apiKey===null || token===config.app.apiKey){
+function BasicAuth(req, def, token, callback) {
+  if (config.app.apiKey === null || token === config.app.apiKey) {
     return callback();
   }
   return req.res
@@ -20,4 +20,4 @@ function BasicAuth(req, def, token, callback){
     .json(new AccessDenied());
 }
 
-module.exports = { BasicAuth };
+module.exports = {BasicAuth};

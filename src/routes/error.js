@@ -6,14 +6,14 @@ const Error = require('../models/Error');
 function handler(err, req, res, next) {
   let error = err;
   let isError = false;
-  for(let errname in Error){
-    if(err instanceof Error[errname]){
+  for (let errname in Error) {
+    if (err instanceof Error[errname]) {
       isError = true;
       break;
     }
   }
 
-  if(!isError){
+  if (!isError) {
     console.log(err);
     error = new Error.InternalError();
   }
