@@ -1,0 +1,32 @@
+{
+  "name": "MedicalRecrodsApi",
+  "version": "0.0.1",
+  "description": "api for MedicalRecordsStorage interconnection",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express.js",
+    "swagger",
+    "rest"
+  ],
+  "author": "Alexander Pliskin <alexnetmore@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "swagger-jsdoc": "^1.9.7",
+    "swagger-tools": "^0.10.3",
+    "web3": "^1.0.0-beta.30",
+    "bitcore-ecies": "^1.0.3",
+    "bitcore-lib": "^0.14.0",
+    "crypto-js": "^3.1.9-1",
+    "ethereumjs-util": "^5.1.3",
+    "ipfs-api": "^18.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
